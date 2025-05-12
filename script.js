@@ -10,8 +10,8 @@ function divide(x,y){
 function multiply(x,y){
     return x*y;
 }
-let number1 = 0;
-let number2 = 0;
+let number1 
+let number2 
 let operator = "";
 
 function operate(num1,operator,num2){
@@ -33,13 +33,14 @@ for (let i=0;i<10;i++){
     const button = document.querySelector(`#button${i}`);
     button.addEventListener("click",() => {
         display.textContent += i;
-        if (number1 !== undefined ){
+        if (number1 === undefined ){
             number1 = i;
         }
         else{
             number2 = i;
         }
         console.log(number1);
+        console.log(number2);
     });
     
 }
@@ -49,8 +50,8 @@ mult.addEventListener("click",() => {
     operator = "*";
     console.log(operator);
 });
-const add = document.querySelector("#plus");
-mult.addEventListener("click",() => {
+const addition = document.querySelector("#plus");
+addition.addEventListener("click",() => {
     display.textContent += "+";
     operator = "+";
     console.log(operator);
@@ -73,6 +74,6 @@ equal.addEventListener("click",() => {
     display.textContent=operation;
 });
 const clear = document.querySelector("#clear");
-mult.addEventListener("click",() => {
-    display.textContent += " ";
+clear.addEventListener("click",() => {
+    display.textContent = " ";
 });
