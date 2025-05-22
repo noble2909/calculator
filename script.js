@@ -14,6 +14,7 @@ let number1
 let number2 
 let operator = "";
 let inputbuffer = "";
+let signbuffer="";
 
 function operate(num1,operator,num2){
     if (operator === "+"){
